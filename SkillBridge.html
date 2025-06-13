@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Nâng cao năng lực, Kết nối cơ hội</title>
+    <style>
+        :root {
+            --primary-color: #005A9C;
+            --secondary-color: #003F6B;
+            --accent-color: #FDB813;
+            --light-gray: #f4f4f4;
+            --dark-gray: #333;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 1rem 0;
+            border-bottom: 3px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        header h1 span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        #hero {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        #hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+        }
+
+        .service-list, .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item, .course-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .course-item h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .course-item ul {
+            padding-left: 20px;
+        }
+        
+        .course-item ul li {
+            margin-bottom: 10px;
+        }
+
+        #impact .impact-goals {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .goal {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 350px;
+        }
+
+        .goal h3 {
+            color: var(--primary-color);
+        }
+
+        #employers {
+            background: var(--secondary-color);
+            color: #fff;
+        }
+        #employers .section-title {
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--dark-gray);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: var(--dark-gray);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Skill<span>Bridge</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Về Dự Án</a></li>
+                    <li><a href="#services">Dịch Vụ</a></li>
+                    <li><a href="#courses">Khóa Học</a></li>
+                    <li><a href="#employers">Nhà Tuyển Dụng</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h2>Nâng Cao Năng Lực, Kết Nối Cơ Hội</h2>
+        <p>Nền tảng tiên tiến, ứng dụng AI để kết nối người khuyết tật với các cơ hội việc làm phù hợp và thúc đẩy một lực lượng lao động hòa nhập.</p>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Thách Thức & Giải Pháp</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Khoảng Trống Việc Làm</h3>
+                    <p>Việt Nam có hơn 8 triệu người khuyết tật (NKT), trong đó nhiều người sống ở vùng nông thôn, vùng sâu vùng xa gặp nhiều khó khăn. Tỷ lệ tham gia lực lượng lao động của NKT thấp hơn nhiều so với người không khuyết tật. Các rào cản chính bao gồm hạn chế về kỹ năng nghề nghiệp, điều kiện tiếp cận hạ tầng và đặc biệt là định kiến xã hội, khiến họ khó tìm được việc làm ổn định.</p>
+                </div>
+                <div class="card">
+                    <h3>Sáng Kiến SkillBridge</h3>
+                    <p>SkillBridge ra đời để giải quyết khoảng trống này. Chúng tôi ứng dụng công nghệ Trí tuệ Nhân tạo (AI) để xây dựng một hệ sinh thái toàn diện, kết nối hiệu quả NKT với nhà tuyển dụng. Nền tảng của chúng tôi cung cấp các gợi ý việc làm được cá nhân hóa, hệ thống đào tạo kỹ năng mềm, kỹ năng số miễn phí và dịch vụ tư vấn nghề nghiệp, giúp NKT phát huy tối đa tiềm năng và phát triển bền vững.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Kết Nối Việc Làm Thông Minh</h3>
+                    <p>Hệ thống gợi ý việc làm dựa trên AI, tự động phân tích hồ sơ, điểm mạnh và sở thích của người dùng để đề xuất các vị trí công việc phù hợp nhất.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Đào Tạo Kỹ Năng Online Miễn Phí</h3>
+                    <p>Các khóa học đa dạng về kỹ năng mềm, kỹ năng làm việc từ xa và kiến thức CNTT cơ bản giúp NKT cải thiện khả năng thích nghi và nâng cao giá trị bản thân.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Kết Nối Trực Tiếp Nhà Tuyển Dụng</h3>
+                    <p>Nền tảng tạo ra một kênh liên lạc nhanh chóng, hiệu quả và minh bạch, kết nối trực tiếp giữa người lao động khuyết tật và nhà tuyển dụng có nhu cầu.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Cộng Đồng Hỗ Trợ</h3>
+                    <p>Xây dựng một cộng đồng để mọi người hỗ trợ lẫn nhau, chia sẻ kinh nghiệm, giúp NKT tự tin và chủ động trong quá trình tìm kiếm việc làm và phát triển bản thân.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Các Khóa Học Cá Nhân Hóa</h2>
+            <p style="text-align: center; max-width: 800px; margin: -20px auto 40px;">Chúng tôi tập trung vào các nhóm NKT có tỷ lệ việc làm thấp, cung cấp các khóa học 6 tháng được thiết kế riêng để xây dựng kỹ năng phù hợp.</p>
+            <div class="course-list">
+                <div class="course-item">
+                    <h4>Khóa học cho người khuyết tật nhìn </h4>
+                    <p><strong>Tên khóa học:</strong> "Công nghệ số và nghề nghiệp cho người khiếm thị" </p>
+                    <ul>
+                        <li>Sử dụng phần mềm đọc màn hình (NVDA, JAWS).</li>
+                        <li>Tin học văn phòng cơ bản bằng giọng nói (Word, Excel, Email).</li>
+                        <li>Định hướng nghề nghiệp: Nhập liệu, tổng đài viên, viết nội dung.</li>
+                    </ul>
+                </div>
+                <div class="course-item">
+                    <h4>Khóa học cho người khuyết tật giao tiếp </h4>
+                    <p><strong>Tên khóa học:</strong> "Diễn đạt bản thân và kết nối xã hội" </p>
+                     <ul>
+                        <li>Sử dụng công cụ giao tiếp thay thế (AAC, phần mềm).</li>
+                        <li>Luyện tập giao tiếp phi ngôn ngữ, ngôn ngữ cơ thể.</li>
+                        <li>Giao tiếp nhóm, chia sẻ cảm xúc qua hình ảnh/video.</li>
+                    </ul>
+                </div>
+                <div class="course-item">
+                    <h4>Khóa học cho người khuyết tật vận động thân trên </h4>
+                    <p><strong>Tên khóa học:</strong> "Học tập và làm việc thông minh với giới hạn vận động" </p>
+                    <ul>
+                        <li>Sử dụng phần mềm điều khiển bằng mắt/giọng nói.</li>
+                        <li>Học nghề: chỉnh sửa ảnh/video, viết content, nhập liệu.</li>
+                        <li>Tạo hồ sơ cá nhân (CV, Portfolio online) và thực tập.</li>
+                    </ul>
+                </div>
+                <div class="course-item">
+                    <h4>Khóa học cho người khuyết tật thần kinh/tâm thần </h4>
+                    <p><strong>Tên khóa học:</strong> "Sống tích cực – Học tập và làm chủ cuộc sống" </p>
+                    <ul>
+                        <li>Làm chủ cảm xúc, kiểm soát căng thẳng.</li>
+                        <li>Cung cấp kỹ năng sống và kỹ năng nghề đơn giản.</li>
+                        <li>Làm quen với nghề đơn giản: bán hàng online, nhập dữ liệu.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="impact" class="section">
+        <div class="container">
+            <h2 class="section-title">Tác Động Xã Hội</h2>
+            <p style="text-align: center; max-width: 800px; margin: -20px auto 40px;">Dự án SkillBridge đóng góp trực tiếp vào các Mục tiêu Phát triển Bền vững (SDG) của Liên Hợp Quốc bằng cách kiến tạo một xã hội công bằng và hòa nhập hơn.</p>
+            <div class="impact-goals">
+                <div class="goal">
+                    <h3>SDG 8: Việc Làm Tốt và Tăng Trưởng Kinh Tế </h3>
+                    <p>Dự án góp phần tạo việc làm đầy đủ, năng suất và tốt cho tất cả mọi người, bao gồm cả người khuyết tật, từ đó thúc đẩy sự tự chủ tài chính và hòa nhập bền vững vào nền kinh tế số.</p>
+                </div>
+                <div class="goal">
+                    <h3>SDG 10: Giảm Bất Bình Đẳng </h3>
+                    <p>Chúng tôi thúc đẩy sự hòa nhập xã hội và kinh tế cho tất cả mọi người không phân biệt khuyết tật. Dự án giúp thu hẹp khoảng cách số, tăng khả năng tiếp cận thông tin và cơ hội, chống lại định kiến xã hội và xây dựng văn hóa đa dạng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="employers" class="section">
+        <div class="container">
+            <h2 class="section-title">Dành Cho Nhà Tuyển Dụng</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h3>Khai Phá Nguồn Nhân Lực Tiềm Năng</h3>
+                <p>Hợp tác với SkillBridge giúp doanh nghiệp tiếp cận nguồn nhân lực tiềm năng nhưng chưa được khai thác hiệu quả. Bằng cách xây dựng một môi trường làm việc hòa nhập, quý công ty không chỉ nâng cao hình ảnh thương hiệu, thực hiện trách nhiệm xã hội (CSR) mà còn được hưởng lợi từ các kỹ năng và góc nhìn đa dạng mà người khuyết tật mang lại.</p>
+                <a href="#contact" class="btn">Trở Thành Đối Tác</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+         <div class="container" style="text-align: center;">
+            <h2 class="section-title">Tham Gia Cùng Chúng Tôi</h2>
+            <p>Dù bạn là người tìm việc, nhà tuyển dụng hay đối tác tiềm năng, bạn đều có thể trở thành một phần của sự thay đổi này.</p>
+            <a href="#" class="btn">Đăng Ký Ngay</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dự án SkillBridge | Một sáng kiến của Nhóm sinh viên UEH:<br>
+                Lê Đình Minh - Nguyễn Phước Minh Tâm - Ngô Gia Nguyên Bảo<br>
+                Lê Phương Nguyên - Nguyễn Thùy Trang - Nguyễn Như Ý        </div>
+    </footer>
+
+</body>
+</html>
